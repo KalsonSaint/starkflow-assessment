@@ -1,5 +1,7 @@
 import React from "react";
-import { BrowserRouter, Switch } from "react-router";
+import { Switch } from "react-router";
+import { Redirect } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom/cjs/react-router-dom.min";
 import PublicRoutes from "./PublicRoutes";
 import Routes from "./Routes";
 

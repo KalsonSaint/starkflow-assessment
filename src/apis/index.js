@@ -8,16 +8,11 @@ const devs = axios.create({
   baseURL: "https://gh-trending-api.herokuapp.com/developers",
 });
 
-/**
- * @param  {string} response
- */
+/* -------------------- Handle Success and Error from Endpoints ------------------*/
 const successHandler = (response) => {
   return response;
 };
 
-/**
- * @param  {} error
- */
 const errorHandler = (error) => {
   return Promise.reject(error);
 };
@@ -35,6 +30,7 @@ devs.interceptors.response.use(
     return errorHandler(error);
   }
 );
+/* -------------------- End of Success and Error handling ----------------*/
 
 export const getTrendingRepoApi = async () => {
   try {

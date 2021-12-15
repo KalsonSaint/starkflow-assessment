@@ -15,3 +15,5 @@ const Routes = [
     component: Developers,
   },
 ];
+
+export default Routes;

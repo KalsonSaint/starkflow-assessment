@@ -112,7 +112,7 @@ const Repositories = () => {
                         </p>
                         <div className="inline-flex">
                           Built by
-                          {item.builtBy.map((b, i) => (
+                          {item.builtBy?.map((b, i) => (
                             <img
                               src={b.avatar}
                               alt=""

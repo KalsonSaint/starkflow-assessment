@@ -28,7 +28,7 @@ const Developers = () => {
         <div className="main__section container px-4 py-10 mx-auto max-w-7xl">
           <div className="rounded-t-xl flex justify-between p-6 main__section-heading">
             <div className="button__links inline-flex">
-              <Link to="/" className="font-medium py-2 px-4 rounded-l">
+              <Link to="/trending" className="font-medium py-2 px-4 rounded-l">
                 Repositories
               </Link>
               <Link
@@ -94,7 +94,7 @@ const Developers = () => {
                         POPULAR REPO
                       </p>
                       <Link
-                        to={item.popularRepository.url}
+                        to={item.popularRepository?.url}
                         className="text-blue-500 text-xl font-medium tracking-wide inline-flex"
                       >
                         <GoRepo

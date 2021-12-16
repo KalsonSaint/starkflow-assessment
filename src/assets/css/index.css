@@ -18,6 +18,7 @@ html {
 }
 .main__section-heading {
   background-color: #161b22;
+  border: 1px solid #30363d;
 }
 .button__links {
   color: #c9d1d9;
@@ -30,6 +31,11 @@ html {
   background-color: #161b22;
   outline: 1.5px solid #30363d;
 }
-svg g [fill] {
-  fill: aliceblue;
+.star__btn {
+  background-color: #21262d;
+  outline: 0.2px solid #161b22;
+  cursor: pointer;
+}
+.repo__list-details {
+  border: 1px solid #30363d;
 }

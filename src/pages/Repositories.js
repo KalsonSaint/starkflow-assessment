@@ -53,7 +53,7 @@ const Repositories = () => {
                     Developers
                   </Link>
                 </div>
-                <div className="nav__links pt-1">
+                <div className="nav__links pt-2">
                   <ul className="flex flex-row justify-evenly">
                     <li className="px-2">Spoken Language: English</li>
                     <li className="px-2">Language: Any</li>
@@ -64,7 +64,7 @@ const Repositories = () => {
               <div className="repo__list">
                 {data.data?.map((item, i) => (
                   <div
-                    className="repo__list-details p-6 border-b-slate-400 flex justify-between border-b-slate-300"
+                    className="repo__list-details p-6 border-b-slate-400 flex justify-between"
                     key={i}
                   >
                     <div>
@@ -121,7 +121,7 @@ const Repositories = () => {
                       </div>
                     </div>
                     <div className="flex flex-col w-60 items-end justify-between">
-                      <div className="justify-self-end inline-flex">
+                      <div className="justify-self-end inline-flex rounded-lg py-1 px-4 star__btn">
                         <FaRegStar
                           style={{
                             position: "relative",

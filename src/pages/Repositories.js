@@ -20,6 +20,7 @@ const Repositories = () => {
         }}
       >
         <PageHelmet title="Trending Repositories" />
+
         <>
           <div className="heading text-center py-10 px-4 border-b-slate-400">
             <h1 className="text-4xl leading-10 py-1 font-medium">Trending</h1>

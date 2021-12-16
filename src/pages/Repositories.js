@@ -72,8 +72,8 @@ const Repositories = () => {
                     key={i}
                   >
                     <div>
-                      <Link
-                        to={item.url}
+                      <a
+                        href={item.url}
                         className="text-2xl inline-flex text-blue-500"
                       >
                         <GoRepo
@@ -87,7 +87,7 @@ const Repositories = () => {
                         <span className="font-medium">
                           {item.repositoryName}
                         </span>
-                      </Link>
+                      </a>
                       <p className="py-2 w-7/12 text-md">{item.description}</p>
                       <div className="flex flex-row p-1">
                         <p className="pr-4">{item.language}</p>
@@ -114,13 +114,15 @@ const Repositories = () => {
                         <div className="inline-flex">
                           Built by
                           {item.builtBy?.map((b, i) => (
-                            <img
-                              src={b.avatar}
-                              alt=""
-                              className="rounded-full"
-                              width="25px"
-                              key={i}
-                            />
+                            <a href={b.url}>
+                              <img
+                                src={b.avatar}
+                                alt=""
+                                className="rounded-full"
+                                width="25px"
+                                key={i}
+                              />
+                            </a>
                           ))}
                         </div>
                       </div>

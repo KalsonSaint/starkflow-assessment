@@ -72,12 +72,12 @@ const Developers = () => {
                         className="rounded-full mr-4"
                       />
                       <div>
-                        <Link
-                          to={item.url}
+                        <a
+                          href={item.url}
                           className="text-blue-500 text-2xl font-medium tracking-wide"
                         >
                           {item.name}
-                        </Link>
+                        </a>
                         <p className="block">{item.username}</p>
                       </div>
                     </div>
@@ -93,8 +93,8 @@ const Developers = () => {
                         />
                         POPULAR REPO
                       </p>
-                      <Link
-                        to={item.popularRepository?.url}
+                      <a
+                        href={item.popularRepository?.url}
                         className="text-blue-500 text-xl font-medium tracking-wide inline-flex"
                       >
                         <GoRepo
@@ -105,7 +105,7 @@ const Developers = () => {
                           }}
                         />
                         {item.popularRepository?.repositoryName}
-                      </Link>
+                      </a>
                       <p>{item.popularRepository?.description}</p>
                     </div>
                     <div>

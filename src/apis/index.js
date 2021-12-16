@@ -1,11 +1,7 @@
 import axios from "axios";
 
-const repos = axios.create({
-  baseURL: "https://gh-trending-api.herokuapp.com/repositories",
-});
-
-const devs = axios.create({
-  baseURL: "https://gh-trending-api.herokuapp.com/developers",
+const instance = axios.create({
+  baseURL: "/",
 });
 
 /* -------------------- Handle Success and Error from Endpoints ------------------*/
@@ -17,14 +13,7 @@ const errorHandler = (error) => {
   return Promise.reject(error);
 };
 
-repos.interceptors.response.use(
-  (response) => successHandler(response),
-  (error) => {
-    return errorHandler(error);
-  }
-);
-
-devs.interceptors.response.use(
+instance.interceptors.response.use(
   (response) => successHandler(response),
   (error) => {
     return errorHandler(error);
@@ -34,7 +23,8 @@ devs.interceptors.response.use(
 
 export const getTrendingRepoApi = async () => {
   try {
-    const response = await repos.get();
+    const url = "/repositories";
+    const response = await instance.get(url);
     return response;
   } catch (err) {
     throw err;
@@ -43,7 +33,8 @@ export const getTrendingRepoApi = async () => {
 
 export const getTrendingDevApi = async () => {
   try {
-    const response = await devs.get();
+    const url = "/developers";
+    const response = await instance.get(url);
     return response;
   } catch (err) {
     throw err;

@@ -9,7 +9,6 @@ import { GoFlame, GoRepo } from "react-icons/go";
 
 const Developers = () => {
   const { data } = useQuery("repos", api.getTrendingDevApi);
-  console.log(data);
 
   return (
     <>
@@ -82,7 +81,7 @@ const Developers = () => {
                         <p className="block">{item.username}</p>
                       </div>
                     </div>
-                    <div className="border px-4 py-2 flex flex-col items-start">
+                    <div className="px-4 py-2 flex flex-col items-start">
                       <p className="inline-flex">
                         <GoFlame
                           color="#DB6D28"
@@ -95,7 +94,7 @@ const Developers = () => {
                         POPULAR REPO
                       </p>
                       <Link
-                        to={item.popularRepository?.url}
+                        to={item.popularRepository.url}
                         className="text-blue-500 text-xl font-medium tracking-wide inline-flex"
                       >
                         <GoRepo

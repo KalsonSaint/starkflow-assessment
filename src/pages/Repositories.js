@@ -118,6 +118,7 @@ const Repositories = () => {
                               alt=""
                               className="rounded-full"
                               width="25px"
+                              key={i}
                             />
                           ))}
                         </div>

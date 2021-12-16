@@ -13,6 +13,12 @@ html {
   background-color: #161b22;
   border-bottom: 1px solid #30363d;
 }
+.heading p {
+  color: #8b949e;
+}
+.main__section-heading {
+  background-color: #161b22;
+}
 .button__links {
   color: #c9d1d9;
 }
@@ -20,7 +26,10 @@ html {
   background-color: #1f6feb;
   border: transparent;
 }
-.button__links button {
+.button__links a {
   background-color: #161b22;
-  border: 1px solid #30363d;
+  outline: 1.5px solid #30363d;
+}
+.epo__list {
+  color: #ffffff;
 }

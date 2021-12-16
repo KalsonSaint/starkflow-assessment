@@ -30,3 +30,6 @@ html {
   background-color: #161b22;
   outline: 1.5px solid #30363d;
 }
+svg g [fill] {
+  fill: aliceblue;
+}

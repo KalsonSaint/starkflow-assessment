@@ -3,10 +3,10 @@ import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import * as api from "../apis";
 import PageHelmet from "../components/PageHelmet";
-
 import Table from "../components/Loader";
 import { GoRepo, GoRepoForked } from "react-icons/go";
 import { FaRegStar } from "react-icons/fa";
+import { MdArrowDropDown } from "react-icons/md";
 import { IconContext } from "react-icons/lib";
 
 const Repositories = () => {
@@ -55,9 +55,24 @@ const Repositories = () => {
                 </div>
                 <div className="nav__links pt-2">
                   <ul className="flex flex-row justify-evenly">
-                    <li className="px-2">Spoken Language: English</li>
-                    <li className="px-2">Language: Any</li>
-                    <li className="px-2">Date range: Today</li>
+                    <li className="px-2 inline-flex">
+                      Spoken Language: English{" "}
+                      <MdArrowDropDown
+                        style={{ position: "relative", top: "5px" }}
+                      />
+                    </li>
+                    <li className="px-2 inline-flex">
+                      Language: Any{" "}
+                      <MdArrowDropDown
+                        style={{ position: "relative", top: "5px" }}
+                      />
+                    </li>
+                    <li className="px-2 inline-flex">
+                      Date range: Today{" "}
+                      <MdArrowDropDown
+                        style={{ position: "relative", top: "5px" }}
+                      />
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -108,13 +123,13 @@ const Repositories = () => {
                           {item.forks}
                         </p>
                         <div className="inline-flex">
-                          Built by {"  "}
+                          Built by
                           {item.builtBy.map((b, i) => (
                             <img
                               src={b.avatar}
                               alt=""
                               className="rounded-full"
-                              width="20px"
+                              width="25px"
                             />
                           ))}
                         </div>

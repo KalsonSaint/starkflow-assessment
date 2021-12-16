@@ -9,7 +9,8 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <KickOff />
-      <ReactQueryDevtools />
+      {/* Uncomment the line below to access ReactQueryDevTools
+      <ReactQueryDevtools /> */}
     </QueryClientProvider>
   );
 };
